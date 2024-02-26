@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import PropsDemo from "./exercises/PropsDemo";
 import ListDemo from "./exercises/ListDemo";
+import EventDemo from "./exercises/EventDemo";
 
 
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
             {/**Add the exercise components you create for each exercise using the key you used for the matching button  */}
             {selectedView == "props1" ? <PropsDemo title="Props Demo" /> : null}
             {selectedView == "list" ? <ListDemo title="List Demo" /> : null}
+            {selectedView == "event" ? <EventDemo title="Event Demo" /> : null}
           </div>
         </div>
       </div>
@@ -51,6 +53,9 @@ const Buttons = (props: ButtonProps) => {
       </button>
       <button className="btn-w100" onClick={() => handleSelected("list")}>
         List demo
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("event")}>
+        Event demo (imageButtons)
       </button>
     </>
   );
