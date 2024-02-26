@@ -4,6 +4,7 @@ import "./App.css";
 import PropsDemo from "./exercises/PropsDemo";
 import ListDemo from "./exercises/ListDemo";
 import EventDemo from "./exercises/EventDemo";
+import FormUncontrolled from "./exercises/FormUncontrolled";
 
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
             {selectedView == "props1" ? <PropsDemo title="Props Demo" /> : null}
             {selectedView == "list" ? <ListDemo title="List Demo" /> : null}
             {selectedView == "event" ? <EventDemo title="Event Demo" /> : null}
+            {selectedView == "form" ? <FormUncontrolled title="Form Uncontrolled" /> : null}
           </div>
         </div>
       </div>
@@ -56,6 +58,9 @@ const Buttons = (props: ButtonProps) => {
       </button>
       <button className="btn-w100" onClick={() => handleSelected("event")}>
         Event demo (imageButtons)
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("form")}>
+        Forms uncontrolled
       </button>
     </>
   );
