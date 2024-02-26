@@ -6,6 +6,7 @@ import ListDemo from "./exercises/ListDemo";
 import EventDemo from "./exercises/EventDemo";
 import FormUncontrolled from "./exercises/FormUncontrolled";
 import StateDemo1 from "./exercises/StateDemo1";
+import StateDemo2 from "./exercises/StateDemo2";
 
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
             {selectedView == "event" ? <EventDemo title="Event Demo" /> : null}
             {selectedView == "form" ? <FormUncontrolled title="Form Uncontrolled" /> : null}
             {selectedView == "state1" ? <StateDemo1 title="State Demo1" /> : null}
+            {selectedView == "state2" ? <StateDemo2 title="State Demo2" /> : null}
           </div>
         </div>
       </div>
@@ -66,6 +68,9 @@ const Buttons = (props: ButtonProps) => {
       </button>
       <button className="btn-w100" onClick={() => handleSelected("state1")}>
         State demo1
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("state2")}>
+        State demo2
       </button>
     </>
   );
