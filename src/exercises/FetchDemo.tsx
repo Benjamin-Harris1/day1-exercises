@@ -11,10 +11,12 @@ type User = { id: number; name: string };
 
 //Utility function to fetch a user from the server
 function fetchUser(userId: number, options?: object): Promise<User> {
+    // If the user for the userId is present in userCache, return a resolved promise with the user
     if (userCache[userId]){
         return Promise.resolve(userCache[userId]);
     }
   return fetch(`${SERVER_URL}/${userId}?delay=${DELAY}`, options).then((res) => res.json()).then((data) => {
+    // Store the fetched user in userCache
     userCache[userId] = data;
     return data;
   });
