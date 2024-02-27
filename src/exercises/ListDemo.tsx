@@ -1,6 +1,6 @@
 import { BaseProps } from "../types";
 import { users } from "../data/data";
-import {UserTable} from "../components/UserTable";
+import UserTable from "../components/UserTable";
 {/**import { Profile } from "../components/Profile";*/}
 type Props = BaseProps;
 
