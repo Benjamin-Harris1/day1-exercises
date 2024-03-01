@@ -8,7 +8,7 @@ Deployment: [https://ashy-stone-0f56afb03.4.azurestaticapps.net/](https://ashy-s
 
 For local development:
 
-bash
+```bash
 npm install
 npm run dev
 ```
